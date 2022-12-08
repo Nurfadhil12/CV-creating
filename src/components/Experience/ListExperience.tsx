@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { DATAEXPERIENCE } from "../../types";
-import ModalExperience from "./ModalExperience";
 
 type Props = {
     list: DATAEXPERIENCE[];
@@ -11,21 +9,13 @@ type Props = {
 const ListExperience = (props: Props) => {
     const { list, onDeleteClickHnd, onEdit } = props;
     console.log(list, "haha")
-    const [showModal, setShowModal] = useState(false);
-    const [dataToShow, setDataToShow] = useState(null as DATAEXPERIENCE | null);
-
-    const viewEmployee = (data: DATAEXPERIENCE) => {
-        setDataToShow(data);
-        setShowModal(true);
-    };
-
-    const onCloseModal = () => setShowModal(false);
+    // const viewEmployee = (data: DATAEXPERIENCE) => {
+    //     setDataToShow(data);
+    //     setShowModal(true);
+    // };
 
     return (
         <div>
-            {showModal && dataToShow !== null && (
-                <ModalExperience onClose={onCloseModal} data={dataToShow} />
-            )}
             <div className="flex flex-col gap-6 mt-6">
                 {list.map((experience) => (
                     <div

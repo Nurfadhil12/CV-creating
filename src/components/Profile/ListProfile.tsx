@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { DATAPROFILE } from "../../types";
 
 type Props = {
@@ -8,17 +7,17 @@ type Props = {
 };
 
 const ListProfile = (props: Props) => {
-    const { list, onDeleteClickHnd, onEdit } = props;
+    const { list, onEdit } = props;
     console.log(list, "haha")
-    const [showModal, setShowModal] = useState(false);
-    const [dataToShow, setDataToShow] = useState(null as DATAPROFILE | null);
+    // const [showModal, setShowModal] = useState(false);
+    // const [dataToShow, setDataToShow] = useState(null as DATAPROFILE | null);
 
-    const viewEmployee = (data: DATAPROFILE) => {
-        setDataToShow(data);
-        setShowModal(true);
-    };
+    // const viewEmployee = (data: DATAPROFILE) => {
+    //     setDataToShow(data);
+    //     setShowModal(true);
+    // };
 
-    const onCloseModal = () => setShowModal(false);
+    // const onCloseModal = () => setShowModal(false);
 
     return (
         <div>
@@ -32,6 +31,7 @@ const ListProfile = (props: Props) => {
                             <img
                                 className="h-52 w-52 rounded-full border-8 border-gray-600 drop-shadow-2xl cursor-pointer hover:scale-105 transition-all"
                                 src={profile.profile}
+                                alt=""
                             />
                         </div>
                         <div className="self-center text-center">

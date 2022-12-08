@@ -16,9 +16,9 @@ const Profile = () => {
         }
     }, []);
 
-    const onAddEmployeeClickHnd = () => {
-        setShownPage(PageEnum1.add);
-    };
+    // const onAddEmployeeClickHnd = () => {
+    //     setShownPage(PageEnum1.add);
+    // };
 
     const showListPage = () => {
         setShownPage(PageEnum1.list);
